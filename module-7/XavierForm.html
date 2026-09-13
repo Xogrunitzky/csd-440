@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form PHP page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+
+    <form action="XavierReply.php" method="POST">
+
+        <!-- 1. String -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name">
+
+        <!-- 2. Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+
+        <!-- 3. Integer -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+
+        <!-- 4. Select / Enumeration -->
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+            <option value="">-- Select a Subject --</option>
+            <option value="General Question">General Question</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Billing">Billing</option>
+            <option value="Feedback">Feedback</option>
+        </select>
+
+        <!-- 5. Date -->
+        <label for="contact_date">Preferred Contact Date:</label>
+        <input type="date" id="contact_date" name="contact_date">
+
+        <!-- 6. Text Area -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <!-- 7. Boolean -->
+        <label>
+            <input type="checkbox" name="newsletter" value="yes">
+            I would like to receive newsletters.
+        </label>
+
+        <input type="submit" value="Submit Contact Form">
+
+    </form>
+</body>
+</html>
